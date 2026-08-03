@@ -1,0 +1,28 @@
+name: Daily Contribution Streak
+
+on:
+  schedule:
+    # Runs at 12:00 UTC every day
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Allows you to trigger it manually
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Update daily file
+        run: |
+          echo "Last updated: $(date)" > streak.txt
+          
+      - name: Commit and Push
+        run: |
+          # IMPORTANT: Replace these with your actual GitHub email and username!
+          git config --global user.name "Neeraj16102004"
+          git config --global user.email "neerajrananr338@gmail.com"
+          git add streak.txt
+          git commit -m "chore: daily streak update"
+          git push
