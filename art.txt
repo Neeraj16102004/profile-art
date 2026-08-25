@@ -3265,3 +3265,4 @@ Art JI 6 1 13
 Art JI 6 1 14
 Art JI 6 2 0
 Art JI 6 2 1
+Art JI 6 2 2
