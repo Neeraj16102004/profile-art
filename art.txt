@@ -3330,3 +3330,4 @@ Art JI 6 6 3
 Art JI 6 6 4
 Art JI 6 6 5
 Art JI 6 6 6
+Art JI 6 6 7
